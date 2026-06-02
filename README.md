@@ -61,13 +61,10 @@ https://your-vercel-link.vercel.app
 
 **Endpoint:**
 GET /api/github/[username]
-
-
 **Example:**
 
+
 /api/github/octocat
-
-
 **Response:**
 ```json
 {
@@ -88,6 +85,9 @@ GET /api/github/[username]
     }
   ]
 }
+
+---
+
 📁 Project Structure
 app/
  ├── page.tsx
@@ -97,15 +97,18 @@ components/
  ├── SearchBar.tsx
  ├── UserCard.tsx
  ├── RepoCard.tsx
+
+---
 ▶️ How to Run Locally
+
 git clone https://github.com/shambhavi614/github-repo-explorer.git
 cd github-repo-explorer
 npm install
 npm run dev
-
+---
 Then open:
-
 http://localhost:3000
+---
 🚀 Future Improvements
 🌙 Dark mode support
 📊 GitHub analytics dashboard
@@ -114,10 +117,10 @@ http://localhost:3000
 📱 Mobile UI improvements
 🎯 Better caching for API calls
 👩‍💻 Author
-
+---
 Shambhavi Jha
 Final Year CSE Student | Aspiring AI Engineer
-
+---
 ⭐ Support
 
 If you like this project:
@@ -125,4 +128,3 @@ If you like this project:
 ⭐ Star the repo
 🍴 Fork it
 🚀 Improve it further
-<p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:9333EA&height=120&section=footer"/> </p> ```
