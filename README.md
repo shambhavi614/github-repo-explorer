@@ -27,7 +27,7 @@ This project was built as part of a frontend/full-stack assignment to demonstrat
 https://your-vercel-link.vercel.app
 
 👉 **GitHub Repository:**  
-https://github.com/shambhavi614/github-repo-explorer
+[https://github.com/shambhavi614/github-repo-explorer](https://github.com/shambhavi614/github-repo-explorer)
 
 ---
 
