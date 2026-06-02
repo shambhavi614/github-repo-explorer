@@ -2,44 +2,57 @@ import SearchBar from "@/components/SearchBar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50 px-6 py-10">
-      <div className="max-w-6xl mx-auto">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-indigo-50 to-cyan-50 px-6 py-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
 
-        {/* HERO SECTION */}
+        {/* HERO */}
         <div className="text-center relative">
 
-          {/* Glow blobs */}
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-72 bg-indigo-300/30 blur-3xl rounded-full"></div>
-          <div className="absolute top-20 right-10 w-60 h-60 bg-cyan-300/30 blur-3xl rounded-full"></div>
+          {/* Background Glow */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-400/20 blur-[140px] rounded-full"></div>
+          <div className="absolute top-10 right-0 w-[300px] h-[300px] bg-cyan-400/20 blur-[120px] rounded-full"></div>
+          <div className="absolute top-10 left-0 w-[300px] h-[300px] bg-purple-400/20 blur-[120px] rounded-full"></div>
 
           <div className="relative z-10">
 
-            <span className="px-4 py-1 text-sm rounded-full bg-indigo-100 text-indigo-600 font-medium">
-              ⚡ Developer Tool
+            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/80 backdrop-blur-md border border-white shadow-md text-indigo-600 font-medium text-sm">
+              ✨ Developer Productivity Tool
             </span>
 
-            <h1 className="text-5xl md:text-6xl font-extrabold mt-5 leading-tight">
-              GitHub <span className="text-indigo-600">Repo</span> Explorer
+            <h1 className="mt-8 text-6xl md:text-7xl font-extrabold tracking-tight leading-tight">
+              Explore{" "}
+              <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-500 bg-clip-text text-transparent">
+                GitHub
+              </span>
+              <br />
+              Like Never Before
             </h1>
 
-            <p className="mt-4 text-gray-600 text-lg max-w-2xl mx-auto">
-              Discover developers, explore repositories, and analyze GitHub profiles in a beautiful interactive dashboard.
+            <p className="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              Search developers, discover repositories, analyze profiles,
+              and explore open-source projects through a beautifully crafted
+              modern dashboard.
             </p>
 
           </div>
         </div>
 
-        {/* SEARCH CARD */}
-        <div className="mt-12">
-          <div className="bg-white/80 backdrop-blur-xl border border-gray-200 shadow-xl rounded-3xl p-8 md:p-12">
+        {/* SEARCH CONTAINER */}
+        <div className="mt-14">
+          <div className="bg-white/70 backdrop-blur-2xl border border-white shadow-2xl rounded-[32px] p-8 md:p-10">
 
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-3 h-3 rounded-full bg-red-400"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-              <div className="w-3 h-3 rounded-full bg-green-400"></div>
-              <span className="text-sm text-gray-500 ml-2">
+
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+              </div>
+
+              <div className="text-sm text-slate-500 font-medium">
                 GitHub Search Console
-              </span>
+              </div>
+
             </div>
 
             <SearchBar />
@@ -47,28 +60,64 @@ export default function Home() {
           </div>
         </div>
 
-        {/* FEATURE STRIP */}
-        <div className="grid md:grid-cols-3 gap-6 mt-10 text-center">
+        {/* FEATURE CARDS */}
+        <div className="grid md:grid-cols-3 gap-6 mt-12">
 
-          <div className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition">
-            <h3 className="font-semibold text-indigo-600">Fast Search</h3>
-            <p className="text-sm text-gray-500 mt-2">
-              Instantly fetch GitHub profiles and repos
+          <div className="group bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-7 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+
+            <div className="text-4xl mb-4">⚡</div>
+
+            <h3 className="font-bold text-xl text-slate-800">
+              Lightning Fast
+            </h3>
+
+            <p className="text-slate-500 mt-3">
+              Instantly fetch GitHub profiles, repositories,
+              stars, and user information.
             </p>
+
           </div>
 
-          <div className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition">
-            <h3 className="font-semibold text-cyan-600">Live Data</h3>
-            <p className="text-sm text-gray-500 mt-2">
-              Real-time GitHub API integration
+          <div className="group bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-7 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+
+            <div className="text-4xl mb-4">📡</div>
+
+            <h3 className="font-bold text-xl text-slate-800">
+              Real-Time Data
+            </h3>
+
+            <p className="text-slate-500 mt-3">
+              Powered directly by the GitHub API
+              for fresh and accurate repository information.
             </p>
+
           </div>
 
-          <div className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition">
-            <h3 className="font-semibold text-purple-600">Developer Friendly</h3>
-            <p className="text-sm text-gray-500 mt-2">
-              Clean UI for easy exploration
+          <div className="group bg-white/80 backdrop-blur-xl border border-white rounded-3xl p-7 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+
+            <div className="text-4xl mb-4">🚀</div>
+
+            <h3 className="font-bold text-xl text-slate-800">
+              Developer Friendly
+            </h3>
+
+            <p className="text-slate-500 mt-3">
+              Modern user experience designed for
+              quick exploration and productivity.
             </p>
+
+          </div>
+
+        </div>
+
+        {/* FOOTER */}
+        <div className="text-center mt-16 pb-6">
+
+          <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white shadow-md border">
+            <span>⚙️</span>
+            <span className="text-sm text-slate-600">
+              Powered by GitHub API • Built with Next.js
+            </span>
           </div>
 
         </div>

@@ -51,21 +51,28 @@ export default function SearchBar() {
     if (sortBy === "stars") return b.stargazers_count - a.stargazers_count;
     if (sortBy === "name") return a.name.localeCompare(b.name);
     if (sortBy === "updated")
-      return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
+      return (
+        new Date(b.updated_at).getTime() -
+        new Date(a.updated_at).getTime()
+      );
     return 0;
   });
 
   return (
-    <div className="max-w-6xl mx-auto space-y-8">
+    <div className="max-w-6xl mx-auto space-y-10">
 
-      {/* SEARCH CARD */}
+      {/* SEARCH SECTION */}
       <div className="
-        bg-gradient-to-br from-white to-slate-50
-        border border-slate-200
-        shadow-xl
-        rounded-3xl
+        relative overflow-hidden
+        bg-white/80
+        backdrop-blur-2xl
+        border border-white
+        rounded-[32px]
+        shadow-2xl
         p-6 md:p-8
       ">
+
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500"></div>
 
         <div className="flex flex-col md:flex-row gap-4">
 
@@ -76,16 +83,19 @@ export default function SearchBar() {
             placeholder="🔍 Search GitHub username..."
             className="
               flex-1
-              px-5 py-4
+              px-6 py-4
               rounded-2xl
-              border border-slate-300
+              border border-slate-200
               bg-white
-              text-gray-700
+              text-slate-700
+              placeholder:text-slate-400
               text-lg
               shadow-sm
               focus:outline-none
-              focus:ring-4 focus:ring-indigo-200
-              transition
+              focus:ring-4
+              focus:ring-indigo-100
+              focus:border-indigo-400
+              transition-all
             "
           />
 
@@ -96,11 +106,14 @@ export default function SearchBar() {
               rounded-2xl
               font-semibold
               text-white
-              bg-gradient-to-r from-indigo-600 to-purple-600
+              bg-gradient-to-r
+              from-indigo-600
+              via-purple-600
+              to-cyan-500
               shadow-lg
-              hover:scale-[1.03]
               hover:shadow-2xl
-              transition
+              hover:-translate-y-0.5
+              transition-all duration-300
             "
           >
             {loading ? "Searching..." : "Search"}
@@ -110,12 +123,14 @@ export default function SearchBar() {
 
         {/* RECENT SEARCHES */}
         {recentSearches.length > 0 && (
-          <div className="mt-6">
-            <p className="text-xs uppercase tracking-wider text-slate-500 mb-3">
-              Recent searches
+          <div className="mt-7">
+
+            <p className="text-xs uppercase tracking-[0.25em] text-slate-400 mb-3 font-medium">
+              Recent Searches
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
+
               {recentSearches.map((item) => (
                 <button
                   key={item}
@@ -123,18 +138,23 @@ export default function SearchBar() {
                   className="
                     px-4 py-2
                     rounded-full
-                    bg-indigo-50
-                    text-indigo-600
+                    bg-white
+                    border border-slate-200
+                    text-slate-600
                     text-sm
-                    border border-indigo-100
-                    hover:bg-indigo-100
-                    transition
+                    shadow-sm
+                    hover:border-indigo-300
+                    hover:text-indigo-600
+                    hover:shadow-md
+                    transition-all
                   "
                 >
                   {item}
                 </button>
               ))}
+
             </div>
+
           </div>
         )}
       </div>
@@ -145,8 +165,8 @@ export default function SearchBar() {
           bg-red-50
           border border-red-200
           text-red-600
-          rounded-2xl
-          p-4
+          rounded-3xl
+          p-5
           shadow-sm
         ">
           ❌ {error}
@@ -156,54 +176,74 @@ export default function SearchBar() {
       {/* EMPTY STATE */}
       {!user && !loading && !error && (
         <div className="
-          bg-white
+          bg-white/80
+          backdrop-blur-xl
           border border-slate-200
-          rounded-3xl
-          shadow-lg
-          p-12
+          rounded-[32px]
+          shadow-xl
+          p-14
           text-center
         ">
-          <div className="text-6xl mb-4">🚀</div>
 
-          <h3 className="text-2xl font-bold text-slate-800">
+          <div className="text-7xl mb-5">
+            🚀
+          </div>
+
+          <h3 className="text-3xl font-bold text-slate-900">
             Explore GitHub Developers
           </h3>
 
-          <p className="text-slate-500 mt-2">
-            Search any username to discover profiles and repositories instantly
+          <p className="text-slate-500 mt-3 max-w-xl mx-auto">
+            Search any GitHub username and instantly discover profiles,
+            repositories, stars, and activity.
           </p>
+
         </div>
       )}
 
-      {/* USER */}
+      {/* USER CARD */}
       {user && <UserCard user={user} />}
 
       {/* REPOSITORIES */}
       {repos.length > 0 && (
         <>
-          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
             <div>
-              <h2 className="text-3xl font-bold text-slate-800">
+
+              <h2 className="
+                text-4xl
+                font-extrabold
+                bg-gradient-to-r
+                from-slate-900
+                via-indigo-700
+                to-purple-600
+                bg-clip-text
+                text-transparent
+              ">
                 Repositories
               </h2>
 
-              <p className="text-slate-500">
+              <p className="text-slate-500 mt-1">
                 {repos.length} repositories found
               </p>
+
             </div>
 
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="
-                px-4 py-3
-                rounded-xl
-                border border-slate-300
+                px-5 py-3
+                rounded-2xl
+                border border-slate-200
                 bg-white
                 shadow-sm
+                font-medium
+                text-slate-700
                 focus:outline-none
-                focus:ring-2 focus:ring-indigo-200
+                focus:ring-4
+                focus:ring-indigo-100
               "
             >
               <option value="stars">⭐ Top Stars</option>
@@ -213,14 +253,18 @@ export default function SearchBar() {
 
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+
             {sortedRepos.map((repo) => (
-              <RepoCard key={repo.id} repo={repo} />
+              <RepoCard
+                key={repo.id}
+                repo={repo}
+              />
             ))}
+
           </div>
         </>
       )}
-
     </div>
   );
 }
