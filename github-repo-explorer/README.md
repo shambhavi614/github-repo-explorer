@@ -1,67 +1,223 @@
-🚀 GitHub Repo Explorer
-<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=2500&pause=1000&color=4F46E5&center=true&vCenter=true&width=600&lines=Search+GitHub+Users+Instantly;Explore+Repositories+Beautifully;Modern+Next.js+Dashboard+UI" /> </p>
-<p align="center"> <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js" /> <img src="https://img.shields.io/badge/TailwindCSS-UI-blue?style=for-the-badge&logo=tailwindcss" /> <img src="https://img.shields.io/badge/TypeScript-Strong-blue?style=for-the-badge&logo=typescript" /> <img src="https://img.shields.io/badge/API-GitHub-lightgrey?style=for-the-badge&logo=github" /> </p>
-✨ About the Project
+# 🚀 GitHub Repo Explorer
 
-A modern GitHub Explorer dashboard built using Next.js that allows users to search GitHub profiles, explore repositories, and analyze developer data in a beautiful UI.
+A modern GitHub repository explorer built with Next.js and Tailwind CSS. This application allows users to search for any GitHub profile, view user information, and explore repositories with sorting options. The project demonstrates API integration, responsive UI design, state management, and full-stack capabilities using Next.js API routes.
 
-⚡ Features
-<p align="center">
+---
 
-🔍 Instant GitHub user search
-👤 Profile dashboard (bio, followers, repos)
-📦 Repository explorer with sorting
-⭐ Star-based ranking system
-🕒 Recent search history (localStorage)
-🎨 Modern UI with glassmorphism & gradients
-⚡ Fast API integration
+## 🌐 Live Demo
 
-</p>
-🖥️ Tech Stack
-Frontend  : Next.js (App Router)
-Styling   : Tailwind CSS
-Language  : TypeScript
-API       : GitHub REST API
-State     : React Hooks
-📸 UI Preview
-<p align="center"> <img src="https://user-images.githubusercontent.com/placeholder/home.png" width="45%" /> <img src="https://user-images.githubusercontent.com/placeholder/profile.png" width="45%" /> </p>
-📁 Project Structure
+🔗 Live Application: https://YOUR_VERCEL_LINK.vercel.app
+
+💻 GitHub Repository: https://github.com/shambhavi614/github-repo-explorer
+
+---
+
+## ✨ Features
+
+- 🔍 Search GitHub users by username
+- 👤 View profile information
+  - Avatar
+  - Name
+  - Username
+  - Bio
+  - Followers
+  - Following
+  - Public Repositories
+  - Location
+  - Company
+- 📦 Explore repositories
+- ⭐ Sort repositories by stars
+- 🔤 Sort repositories alphabetically
+- 🕒 Sort repositories by last updated date
+- 💾 Recent search history using Local Storage
+- 📱 Responsive design
+- 🎨 Modern UI built with Tailwind CSS
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Next.js API Routes
+
+### Libraries
+- Axios
+
+### External APIs
+- GitHub REST API
+
+### Why These Technologies?
+
+- **Next.js**: Full-stack framework with built-in API routes.
+- **React**: Component-based UI development.
+- **TypeScript**: Better type safety and maintainability.
+- **Tailwind CSS**: Fast and modern UI styling.
+- **Axios**: Simplified API requests.
+- **GitHub API**: Real-time GitHub data.
+
+---
+
+## 📡 API Documentation
+
+### Get GitHub User and Repositories
+
+**Method**
+
+```http
+GET
+```
+
+**Endpoint**
+
+```http
+/api/github/[username]
+```
+
+**Example**
+
+```http
+/api/github/octocat
+```
+
+### Response
+
+```json
+{
+  "user": {
+    "login": "octocat",
+    "name": "The Octocat",
+    "avatar_url": "https://...",
+    "followers": 100,
+    "following": 10,
+    "public_repos": 20,
+    "bio": "GitHub mascot"
+  },
+  "repos": [
+    {
+      "id": 1,
+      "name": "hello-world",
+      "description": "My first repository",
+      "stargazers_count": 50,
+      "language": "JavaScript",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  ]
+}
+```
+
+---
+
+## 📁 Project Structure
+
+```text
 app/
- ├── page.tsx
- ├── api/github/[username]
+│
+├── api/
+│   └── github/
+│       └── [username]/
+│           └── route.ts
+│
+├── page.tsx
+│
 components/
- ├── SearchBar.tsx
- ├── UserCard.tsx
- ├── RepoCard.tsx
+│
+├── SearchBar.tsx
+├── UserCard.tsx
+├── RepoCard.tsx
+│
 public/
-styles/
-🚀 Getting Started
-1️⃣ Clone Repo
-git clone https://github.com/your-username/github-repo-explorer.git
-2️⃣ Install Dependencies
+│
+README.md
+```
+
+---
+
+## ▶️ How to Run Locally
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/shambhavi614/github-repo-explorer.git
+```
+
+### Navigate to Project Directory
+
+```bash
+cd github-repo-explorer
+```
+
+### Install Dependencies
+
+```bash
 npm install
-3️⃣ Run Development Server
+```
+
+### Start Development Server
+
+```bash
 npm run dev
-4️⃣ Open App
+```
+
+### Open Browser
+
+```text
 http://localhost:3000
-🔑 API Reference
-https://api.github.com/users/{username}
-https://api.github.com/users/{username}/repos
-📊 Features Breakdown
-Feature	Description
-🔍 Search	Find GitHub users instantly
-👤 Profile	Clean profile dashboard
-📦 Repos	Sorted repository listing
-⭐ Stars	Popularity ranking
-🕒 History	Recent searches saved
-🎯 Future Improvements
-🌙 Dark Mode Toggle
-📈 Repo analytics dashboard
-🔐 GitHub OAuth login
-⚡ Infinite scrolling
-📱 Mobile optimization
-👨‍💻 Author
-<p align="center"> <b>Shambhavi Jha</b><br/> Final Year CSE Student | AI Engineer Aspirant </p>
-🌟 Support
-<p align="center"> If you like this project, ⭐ star it and share it! </p>
-<p align="center"> <img src="https://capsule-render.vercel.app/api?type=waving&color=0:4F46E5,100:9333EA&height=120&section=footer"/> </p>
+```
+
+---
+
+## 🚀 Next Steps
+
+Future improvements that can be added:
+
+- 🌙 Dark mode support
+- 🔐 GitHub OAuth authentication
+- 📊 Repository analytics dashboard
+- ⚡ Infinite scrolling for repositories
+- 📱 Enhanced mobile experience
+- 🏷️ Repository filtering by language
+- 📈 Charts and visual statistics
+- 🚀 Better caching and performance optimizations
+
+---
+
+## 🧪 Testing
+
+The application has been tested for:
+
+- User search functionality
+- API integration
+- Repository sorting
+- Responsive layout
+- Error handling
+- Empty states
+
+---
+
+## 👩‍💻 Author
+
+**Shambhavi Jha**
+
+Final Year Computer Science Engineering Student
+
+Aspiring AI Engineer
+
+---
+
+## ⭐ Support
+
+If you found this project useful:
+
+- Star the repository ⭐
+- Fork the project 🍴
+- Share feedback 🚀
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS.
