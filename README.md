@@ -11,11 +11,7 @@ A modern GitHub repository explorer built with Next.js and Tailwind CSS. This ap
 💻 GitHub Repository: https://github.com/shambhavi614/github-repo-explorer
 
 ---
-<img width="1400" height="1071" alt="image" src="https://github.com/user-attachments/assets/8276712e-c480-45d2-b795-14512fa4734e" />
 
-<img width="1189" height="4076" alt="image" src="https://github.com/user-attachments/assets/4f6754ff-ecb0-4d9b-b3a4-0d709d801cc7" />
-
----
 ## ✨ Features
 
 - 🔍 Search GitHub users by username

@@ -1,0 +1,10 @@
+var R=require("../../../../chunks/[turbopack]_runtime.js")("server/app/api/github/[username]/route.js")
+R.c("server/chunks/13gh_github-repo-explorer_app_api_github_[username]_route_ts_1nsoc6k._.js")
+R.c("server/chunks/0985_next_09p5fg6._.js")
+R.c("server/chunks/0985_axios_lib_1kctgl5._.js")
+R.c("server/chunks/0985_mime-db_10ywlli._.js")
+R.c("server/chunks/0985_1_fsxgk._.js")
+R.c("server/chunks/[root-of-the-server]__0xmmtc9._.js")
+R.c("server/chunks/1-_f__next-internal_server_app_api_github_[username]_route_actions_0255a0o.js")
+R.m("[project]/github-repo-explorer/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/github-repo-explorer/github-repo-explorer/app/api/github/[username]/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
+module.exports=R.m("[project]/github-repo-explorer/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/github-repo-explorer/github-repo-explorer/app/api/github/[username]/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

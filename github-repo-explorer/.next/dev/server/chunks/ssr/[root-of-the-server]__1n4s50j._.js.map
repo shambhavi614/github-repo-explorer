@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 13, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Shambhavi/github-repo-explorer/github-repo-explorer/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 256, height: 256 }\n"],"names":["src","width","height"],"mappings":";;;;AAAA;;uCACe;IAAEA,KAAAA,+LAAG;IAAEC,OAAO;IAAKC,QAAQ;AAAI"}},
+    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Shambhavi/github-repo-explorer/github-repo-explorer/app/page.tsx"],"sourcesContent":["export default function Home() {\n  return (\n    <main className=\"min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 p-6\">\n      <div className=\"max-w-6xl mx-auto\">\n\n        <h1 className=\"text-4xl font-bold text-center\">\n          GitHub Repo Explorer\n        </h1>\n\n        <p className=\"text-center text-gray-500 mt-2\">\n          Search GitHub users and explore their repositories\n        </p>\n\n        <div className=\"mt-8\">\n          <SearchBar />\n        </div>\n\n      </div>\n    </main>\n  );\n}"],"names":["Home","className","SearchBar"],"mappings":";;;;;;AAAe,SAASA;IACtB,qBACE,0SAAC;QAAKC,WAAU;kBACd,cAAA,0SAAC;YAAIA,WAAU;;8BAEb,0SAAC;oBAAGA,WAAU;8BAAiC;;;;;;8BAI/C,0SAAC;oBAAEA,WAAU;8BAAiC;;;;;;8BAI9C,0SAAC;oBAAIA,WAAU;8BACb,cAAA,0SAACC;;;;;;;;;;;;;;;;;;;;;AAMX"}}]
+}
