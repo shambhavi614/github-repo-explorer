@@ -3,7 +3,10 @@
 A modern GitHub repository explorer built with Next.js and Tailwind CSS. This application allows users to search for any GitHub profile, view user information, and explore repositories with sorting options. The project demonstrates API integration, responsive UI design, state management, and full-stack capabilities using Next.js API routes.
 
 ---
+<img width="1415" height="1534" alt="image" src="https://github.com/user-attachments/assets/c78076d3-e58e-4d9f-a784-6fc617acce2f" />
+<img width="1465" height="1830" alt="image" src="https://github.com/user-attachments/assets/a3545c11-3635-4ff7-8b75-fa2e305a701b" />
 
+---
 ## 🌐 Live Demo
 
 🔗 Live Application: https://YOUR_VERCEL_LINK.vercel.app
