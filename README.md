@@ -9,7 +9,7 @@ A modern GitHub repository explorer built with Next.js and Tailwind CSS. This ap
 ---
 ## 🌐 Live Demo
 
-🔗 Live Application: [https://YOUR_VERCEL_LINK.vercel.app](https://github-repo-explorer-woad.vercel.app/)
+🔗 Live Application: [https://MY_VERCEL_LINK.vercel.app](https://github-repo-explorer-woad.vercel.app/)
 
 💻 GitHub Repository: [https://github.com/shambhavi614/github-repo-explorer](https://github.com/shambhavi614/github-repo-explorer)
 
