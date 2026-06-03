@@ -5,7 +5,6 @@ A modern GitHub repository explorer built with Next.js and Tailwind CSS. This ap
 ---
 <img width="1415" height="1534" alt="image" src="https://github.com/user-attachments/assets/c78076d3-e58e-4d9f-a784-6fc617acce2f" />
 <img width="1465" height="1830" alt="image" src="https://github.com/user-attachments/assets/a3545c11-3635-4ff7-8b75-fa2e305a701b" />
-<img width="1557" height="667" alt="image" src="https://github.com/user-attachments/assets/a0f90c28-1eee-4ca8-865a-1a4af4e6f263" />
 
 
 ---
